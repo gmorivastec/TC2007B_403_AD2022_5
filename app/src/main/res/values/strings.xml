@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Semana6AM</string>
+    <string name="main_saludo">hi from res!</string>
+    <string name="main_guardar">save pref</string>
+    <string name="main_borrar">remove pref</string>
+    <string name="main_borrar_todo">remove all prefs</string>
+    <string name="main_mostrar">show prefs</string>
+    <string name="main_hint">shared pref hint</string>
+    <string name="main_toast">localization test</string>
+</resources>
