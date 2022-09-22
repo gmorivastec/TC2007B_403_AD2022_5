@@ -1,6 +1,7 @@
 package mx.itesm.semana6am
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 
 // API DE UBICACIÓN
 // - requiere registro de tarjeta
@@ -36,6 +38,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var sharedPrefsOutput : TextView
     lateinit var sharedPrefsInput : EditText
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -116,5 +120,12 @@ class MainActivity : AppCompatActivity() {
             sharedPrefs.getString(PREF_CIUDAD, "no hubo ciudad"),
             Toast.LENGTH_SHORT
         ).show()
+    }
+
+
+    fun cambiarAPhoto(v: View?){
+
+        var intent = Intent(this, PhotoActivity::class.java)
+        startActivity(intent)
     }
 }
